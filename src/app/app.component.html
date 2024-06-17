@@ -17,29 +17,31 @@
 <main class="main">
   <div class="content">
     <h1>RX-Rate App</h1>
-    <div>    
-      <div><label for="datetime">Date: <input id="datetime" type="date"></label></div>
-      <div><label>Amount: <input id="amount" type="number"></label></div>
+    <div>
+      <div><label for="datetime">Date: <input id="datetime" type="date" [(ngModel)]="date"></label></div>
+      <div><label>Amount: <input id="amount" type="number" [(ngModel)]="amount"></label></div>
       <div>
-        <label for="currencies">From: 
-          <select name="currencies" id="currencies">
+        <label for="from-currencies">From:
+          <select name="from-currencies" id="from-currencies" [(ngModel)]="fromCurrency">
             <option value="GBP">GBP</option>
             <option value="USD">USD</option>
           </select>
         </label>
       </div>
       <div>
-        <label for="currencies">To: 
-          <select name="currencies" id="currencies">
+        <label for="to-currencies">To:
+          <select name="to-currencies" id="to-currencies" [(ngModel)]="toCurrency">
             <option value="GBP">GBP</option>
             <option value="USD">USD</option>
           </select>
         </label>
       </div>
-      <div><button>Convert</button></div>
+      <div><button (click)="convert()">Convert</button></div>
+      <div *ngIf="convertedAmount">Converted Amount: {{ convertedAmount }}</div>
     </div>
   </div>
 </main>
+
 
 
 <router-outlet />
