@@ -6,9 +6,9 @@ const port = 3000;
 
 // MySQL connection setup
 const db = mysql.createConnection({
-  host: 'http://localhost:4200/',
-  user: 'graam',
-  password: 'StrongPassword1@',
+  host: 'localhost',
+  user: 'user',
+  password: 'password',
   database: 'fxratedb'
 });
 
