@@ -1,11 +1,43 @@
 
 <style>
-  
+  #currencies{
+    width: 200px;
+  }
+  div{
+    padding: 5%;
+    max-width: 30%;
+  }
+  main{
+    background-color: bisque;
+  }
 </style>
+
+
 
 <main class="main">
   <div class="content">
     <h1>RX-Rate App</h1>
+    <div>    
+      <div><label for="datetime">Date: <input id="datetime" type="date"></label></div>
+      <div><label>Amount: <input id="amount" type="number"></label></div>
+      <div>
+        <label for="currencies">From: 
+          <select name="currencies" id="currencies">
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label for="currencies">To: 
+          <select name="currencies" id="currencies">
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+          </select>
+        </label>
+      </div>
+      <div><button>Convert</button></div>
+    </div>
   </div>
 </main>
 
